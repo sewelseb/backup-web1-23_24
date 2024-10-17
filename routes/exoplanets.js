@@ -37,8 +37,6 @@ router.post('/add', upload.single('imageExoplanet'), function (req, res, next) {
     else {
         res.redirect('/exoplanets?errors= Le nom d\'une exoplanète doit faire entre 3 et 100 caractères');
     }
-
-    
 });
 
 
@@ -117,7 +115,6 @@ router.post('/update', function (req, res, next) {
 });
 
 function addExoplanet() {
-    console.log("req.file : " + JSON.stringify(req.file));
     let filename = null;
     // req.file must be undefined if no file given
     if (req.file === undefined) filename = null;
